@@ -9,9 +9,10 @@
   <meta property="og:description" content="El primer parlante inteligente con IA hecho en Argentina. Conversación real, voz natural y enfoque local."/>
   <meta property="og:type" content="website"/>
   <meta property="og:image" content="https://placehold.co/1200x630/png?text=LIA:+Hecho+en+Argentina"/>
+
   <style>
     :root{
-      --bg:#0b0f14; --card:#121823; --muted:#98a2b3; --pri:#58d0a5; --pri-2:#22c55e; --txt:#f3f4f6; --arg:#75aadb;
+      --bg:#0b0f14; --card:#121823; --muted:#98a2b3; --pri:#58d0a5; --pri-2:#22c55e; --txt:#f3f4f6;
       --grad: linear-gradient(135deg, rgba(117,170,219,.28), rgba(88,208,165,.16));
     }
     *{box-sizing:border-box}
@@ -21,33 +22,21 @@
     .logo{display:flex; gap:10px; align-items:center; font-weight:800}
     .logo-mark{width:32px;height:32px;border-radius:8px;background:var(--grad);display:inline-block;border:1px solid #223045}
     .badge-arg{display:inline-flex; align-items:center; gap:6px; padding:6px 10px; border:1px solid #274159; border-radius:999px; font-size:12px; color:#cfe6ff; background:rgba(117,170,219,.12)}
-    .flag-icon{.flag-icon {
-  width: 14px;
-  height: 9px;
-  display: inline-block;
-  background: linear-gradient(
-    to bottom,
-    #74acdf 0%,
-    #74acdf 33%,
-    #ffffff 33%,
-    #ffffff 66%,
-    #74acdf 66%,
-    #74acdf 100%
-  );
-  border-radius: 2px;
-  position: relative;
-  box-shadow: 0 0 0 1px rgba(0,0,0,.25);
-}
-.flag-icon::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 2px;
-  height: 2px;
-  background: #f6b40e;
-  border-radius: 50%;}
+
+    /* Bandera de Argentina hecha en CSS (celeste–blanco–celeste + sol) */
+    .flag-icon{
+      width:14px; height:9px; display:inline-block; position:relative; border-radius:2px;
+      background: linear-gradient(to bottom,
+        #74acdf 0%, #74acdf 33%,
+        #ffffff 33%, #ffffff 66%,
+        #74acdf 66%, #74acdf 100%);
+      box-shadow:0 0 0 1px rgba(0,0,0,.25);
+    }
+    .flag-icon::after{
+      content:""; position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+      width:2px; height:2px; background:#f6b40e; border-radius:50%;
+    }
+
     .cta{background:var(--pri); color:#062b1e; padding:10px 16px; border-radius:12px; text-decoration:none; font-weight:700; display:inline-flex; gap:8px; align-items:center}
     .cta:hover{filter:brightness(1.06)}
     .hero{display:grid; grid-template-columns:1.1fr .9fr; gap:28px; align-items:center; padding:36px 0}
@@ -66,7 +55,7 @@
     .list li{display:flex; gap:10px; align-items:flex-start}
     .tick{color:var(--pri-2)}
     .compare{display:grid; grid-template-columns:1fr 1fr; gap:16px}
-    .kpi{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+    .kpi{display:grid; grid-template-columns:repeat(2,1fr); gap:16px}
     .kpi div{background:#0f1622; padding:12px; border:1px solid #223045; border-radius:12px; text-align:center}
     footer{padding:36px 0; color:#8a97a9; font-size:14px}
     .emailbox{display:flex; gap:8px; flex-wrap:wrap}
@@ -114,7 +103,7 @@
         </div>
         <div class="feature">
           <h3>Conversación real</h3>
-          <p class="muted">No son comandos: LIA entiende contexto, matices y modismos. Si querés, responde con tono argentino.</p>
+          <p class="muted">No son comandos: LIA entiende contexto, matices y modismos.</p>
         </div>
         <div class="feature">
           <h3>Privacidad simple</h3>
